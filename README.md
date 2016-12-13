@@ -9,3 +9,9 @@ To install all necessary dependencies use the following command from the root di
 ```
 pip install -r requirements.txt
 ```
+
+## Tests
+To run all unit tests use the following command from the root dit of the project:
+```
+python -m unittest discover tests/ -p '*_tests.py'
+```
