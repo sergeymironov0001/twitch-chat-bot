@@ -1,11 +1,11 @@
 import irc.bot
 import irc.strings
 
-from .words_counter import WordsCounter
+from twitchchatbot.words_counter import WordsCounter
 
 
 class TwitchWordsCounterBot(irc.bot.SingleServerIRCBot):
-    def __init__(self, channel, nickname, password, server, port=6667):
+    def __init__(self, server, port, channel, nickname, password):
         irc.bot.SingleServerIRCBot.__init__(self, [(server, port, password)], nickname, nickname)
         self.server = server
         self.channel = channel

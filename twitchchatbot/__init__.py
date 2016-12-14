@@ -1,0 +1,2 @@
+from twitchchatbot.words_counter import WordsCounter
+from twitchchatbot.twitch_words_counter_bot import TwitchWordsCounterBot
