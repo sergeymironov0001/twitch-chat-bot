@@ -28,10 +28,10 @@ python -m twitchchatbot --config <path_to_ini_file>
 ```
 An .ini file should looks like the following:
 ```
-[Connection]
-Channel = <channel_name>
-Nickname = <nickname>
-Password = <password>
+[connection]
+channel = <channel_name>
+nickname = <nickname>
+password = <password>
 ```
 ## Additional details
 By default twitch chat bot tries to connect to the __irc.chat.twitch.tv__ server to __6667__ port.
@@ -39,10 +39,10 @@ If you want to change it please use this command line arguments:
 ```
 -s <server> -p <port>
 ``` 
-Or add the following lines to your .ini file: 
+Or add the following lines to your .ini file to the __connection__ section: 
 ```
-Server = <server>
-Port = <port>
+server = <server>
+port = <port>
 ```
 
 ## Tests
@@ -50,3 +50,9 @@ To run all unit tests use the following command from the root dit of the project
 ```
 python -m unittest discover tests/ -p '*_tests.py'
 ```
+
+##TODO
+1. Add documentation to the code
+2. Add setup.py file
+3. Change print to log in the TwitchWordsCounterBot
+4. Add unit tests for the TwitchWordsCounterBot class
