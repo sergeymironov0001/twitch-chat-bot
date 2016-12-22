@@ -44,6 +44,13 @@ Or add the following lines to your .ini file to the __connection__ section:
 server = <server>
 port = <port>
 ```
+### Supported commands
+Bot supports the following commands:
+
+Command     | Description
+------------|------------------------------ 
+!help       | Get list of all commands
+!top_words  | Get 10 top used words
 
 ## Tests
 To run all unit tests use the following command from the root dit of the project:
