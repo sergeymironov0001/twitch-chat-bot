@@ -4,6 +4,9 @@ import configparser
 
 from twitchchatbot import TwitchWordsCounterBot
 
+default_server = "irc.chat.twitch.tv"
+default_port = 6667
+
 
 def main(argv):
     server, port, channel, nickname, password = read_command_line_args(argv)
@@ -28,8 +31,8 @@ def read_command_line_args(argv):
         print(help_message)
         sys.exit(2)
 
-    server = "irc.chat.twitch.tv"
-    port = 6667
+    server = default_server
+    port = default_port
     channel = ""
     nickname = ""
     password = ""
@@ -62,30 +65,31 @@ def read_connection_parameters_from_ini_file(file_name):
     conf = configparser.ConfigParser()
     conf.read(file_name)
 
+    section_name = "connection"
     try:
-        server = conf.get("Connection", "Server")
+        server = conf.get(section_name, "server")
     except configparser.NoOptionError:
-        server = ""
+        server = default_server
 
     try:
-        port = int(conf.get("Connection", "Port"))
+        port = int(conf.get(section_name, "port"))
     except configparser.NoOptionError:
-        port = ""
+        port = default_port
 
     try:
-        channel = "#" + conf.get("Connection", "Channel")
+        channel = "#" + conf.get(section_name, "channel")
     except configparser.NoOptionError:
         print("Channel not defined in the ini file.")
         exit(2)
 
     try:
-        nickname = conf.get("Connection", "Nickname")
+        nickname = conf.get(section_name, "nickname")
     except configparser.NoOptionError:
         print("Nickname not defined in the ini file.")
         exit(2)
 
     try:
-        password = conf.get("Connection", "Password")
+        password = conf.get(section_name, "password")
     except configparser.NoOptionError:
         print("Password not defined in the ini file.")
         exit(2)

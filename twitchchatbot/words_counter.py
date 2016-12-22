@@ -39,10 +39,12 @@ class WordsCounter(object):
     def __len__(self):
         return len(self.__words_map)
 
-    def __str__(self):
-        string = "============================================================\n"
-        string += "Different words count: {}\n".format(len(self))
-        string += "==================Top popular words=====================\n"
-        for (word, count) in self.get_top_words():
-            string += ("[ %s : %d ]\n" % (word, count))
+    def top_words_to_string(self, words_count=10):
+        string = ""
+        if len(self) == 0:
+            string += "words haven't been counted yet"
+        else:
+            for (word, count) in self.get_top_words(words_count):
+                string += ("[ %s : %d ]" % (word, count))
         return string
+
