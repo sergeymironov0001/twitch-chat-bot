@@ -1,5 +1,6 @@
 import irc.bot
 import irc.strings
+import logging
 
 from twitchchatbot.commands import HelpCommand
 from twitchchatbot.commands import TopUsedWordsCommand
@@ -31,28 +32,28 @@ class TwitchWordsCounterBot(irc.bot.SingleServerIRCBot):
             del self.commands_map[command_name]
 
     def start(self):
-        print("Connecting to the server '%s'..." % self.server)
+        logging.info("Connecting to the server '%s'..." % self.server)
         super(TwitchWordsCounterBot, self).start()
 
     def on_welcome(self, connection, event):
-        print("Connected to the server '%s'." % self.server)
-        print("Joining to the channel '%s'..." % self.channel)
+        logging.info("Connected to the server '%s'." % self.server)
+        logging.info("Joining to the channel '%s'..." % self.channel)
         connection.join(self.channel)
 
     def _on_join(self, connection, event):
         super(TwitchWordsCounterBot, self)._on_join(connection, event)
-        print("Joined to the channel '%s'!" % self.channel)
+        logging.info("Joined to the channel '%s'!" % self.channel)
 
     def _on_disconnect(self, connection, event):
         super(TwitchWordsCounterBot, self)._on_disconnect(connection, event)
-        print("Disconnected from the server '%s'." % self.server)
-        print(event)
+        logging.info("Disconnected from the server '%s'." % self.server)
 
     def on_pubmsg(self, connection, event):
         message = event.arguments[0]
         channel = event.target
         command = self.commands_map.get(message)
         if command is not None:
+            logging.info("Received command \'%s\' from the user \'%s\'" % (command, event.source.user))
             command.execute(connection, channel)
         else:
             self.words_counter.count_words(message)

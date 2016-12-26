@@ -1,6 +1,7 @@
-import getopt
-import sys
 import configparser
+import getopt
+import logging.config
+import sys
 
 from twitchchatbot import TwitchWordsCounterBot
 
@@ -10,7 +11,7 @@ default_port = 6667
 
 def main(argv):
     server, port, channel, nickname, password = read_command_line_args(argv)
-    print("server: %s, port: %d, channel: %s, nickname: %s" % (server, port, channel, nickname))
+    logging.info("server: %s, port: %d, channel: %s, nickname: %s" % (server, port, channel, nickname))
     bot = TwitchWordsCounterBot(server, port, channel, nickname, password)
     bot.start()
 
@@ -98,4 +99,5 @@ def read_connection_parameters_from_ini_file(file_name):
 
 
 if __name__ == '__main__':
+    logging.config.fileConfig('./logger.ini')
     sys.exit(main(sys.argv[1:]))

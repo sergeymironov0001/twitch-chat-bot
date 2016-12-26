@@ -52,6 +52,10 @@ Command     | Description
 !help       | Get list of all commands
 !top_words  | Get 10 top used words
 
+### Logging 
+By default the bot is using logging configuration from the __logger.ini__ file from the project root directory.
+
+
 ## Tests
 To run all unit tests use the following command from the root dit of the project:
 ```
@@ -60,5 +64,4 @@ python -m unittest discover tests/ -p '*_tests.py'
 
 ##TODO
 1. Add documentation to the code
-2. Change print to log in the TwitchWordsCounterBot
-3. Add unit tests for the TwitchWordsCounterBot class
+2. Add unit tests for the TwitchWordsCounterBot class
