@@ -1,2 +1,2 @@
-irc
-configparser
+configparser==3.5.0
+irc==15.0.5
