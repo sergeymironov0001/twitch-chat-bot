@@ -60,6 +60,5 @@ python -m unittest discover tests/ -p '*_tests.py'
 
 ##TODO
 1. Add documentation to the code
-2. Add setup.py file
-3. Change print to log in the TwitchWordsCounterBot
-4. Add unit tests for the TwitchWordsCounterBot class
+2. Change print to log in the TwitchWordsCounterBot
+3. Add unit tests for the TwitchWordsCounterBot class
