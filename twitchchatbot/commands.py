@@ -19,7 +19,7 @@ class HelpCommand(Command):
 
     def execute(self, connection, channel):
         message = "[available commands: "
-        for command_name in self.__commands_map:
+        for command_name in sorted(self.__commands_map):
             message += command_name + ", "
         message = message[:-2] + "]"
         connection.privmsg(channel, message)
