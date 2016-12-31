@@ -1,6 +1,13 @@
 # twitch-chat-bot
 Simple twitch chat bot which counts words in the chat.
 
+Bot supports the following commands:
+
+Command     | Description
+------------|------------------------------ 
+!help       | Get list of all commands
+!top_words  | Get 10 top used words
+
 ## Details
 Project written in Python 3.5 and uses [irs library](https://pypi.python.org/pypi/irc).
 
@@ -44,13 +51,6 @@ Or add the following lines to your .ini file to the __connection__ section:
 server = <server>
 port = <port>
 ```
-### Supported commands
-Bot supports the following commands:
-
-Command     | Description
-------------|------------------------------ 
-!help       | Get list of all commands
-!top_words  | Get 10 top used words
 
 ### Logging 
 By default the bot is using logging configuration from the __logger.ini__ file from the project root directory.
