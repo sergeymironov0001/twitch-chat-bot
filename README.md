@@ -63,5 +63,4 @@ python -m unittest discover tests/ -p '*_tests.py'
 ```
 
 ##TODO
-1. Add documentation to the code
-2. Add unit tests for the TwitchWordsCounterBot class
+1. Improve the code documentation
