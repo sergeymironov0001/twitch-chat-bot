@@ -48,8 +48,8 @@ class WordsCounter(object):
     def get_top_words(self, words_count=10):
         """Get top used words from the usage statistics.
 
-        :param words_count:
-        :return:
+        :param words_count: int value how many words should be returned. By default uses 10.
+        :return: dictionary where keys are words, values are words usage count.
         """
         top_words = sorted(self.__words_map, key=lambda k: k, reverse=False)
         top_words = sorted(top_words, key=self.__words_map.get, reverse=True)[:words_count]
