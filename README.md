@@ -1,4 +1,4 @@
-# twitch-chat-bot
+# twitch-chat-bot [![Build Status](https://travis-ci.org/sergeymironov0001/twitch-chat-bot.svg?branch=master)](https://travis-ci.org/sergeymironov0001/twitch-chat-bot.svg?branch=master)
 Simple twitch chat bot which counts words in the chat.
 
 Bot supports the following commands:
