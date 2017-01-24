@@ -1,9 +1,9 @@
 import unittest
 from unittest import mock
 
-from twitchchatbot.commands import HelpCommand
-from twitchchatbot.commands import TopUsedWordsCommand
-from twitchchatbot.words_counter import WordsCounter
+from twitchchatbot import HelpCommand
+from twitchchatbot import TopUsedWordsCommand
+from twitchchatbot import WordsCounter
 
 
 class HelpCommandTests(unittest.TestCase):
