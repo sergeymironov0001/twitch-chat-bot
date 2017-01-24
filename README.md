@@ -59,7 +59,7 @@ By default the bot is using logging configuration from the __logger.ini__ file f
 ## Tests
 To run all unit tests use the following command from the root dit of the project:
 ```
-python -m unittest discover tests/ -p '*_tests.py'
+python -m tests
 ```
 
 ##TODO

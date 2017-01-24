@@ -1,6 +1,7 @@
+import logging
+
 import irc.bot
 import irc.strings
-import logging
 
 from twitchchatbot.commands import HelpCommand
 from twitchchatbot.commands import TopUsedWordsCommand
