@@ -9,7 +9,7 @@ Command     | Description
 !top_words  | Get 10 top used words
 
 ## Details
-Project written in Python 3.5 and uses [irc 15.0.5](https://pypi.python.org/pypi/irc) library.
+The project is written in Python 3.5 and uses [irc 15.0.5](https://pypi.python.org/pypi/irc) library.
 
 ## Installation
 To install all necessary dependencies use the following command from the root dir of the project:
