@@ -1,7 +1,7 @@
-from twitchchatbot.commands import HelpCommand
-from twitchchatbot.commands import TopUsedWordsCommand
 from twitchchatbot.twitch_chat_bot import TwitchChatBot
-from twitchchatbot.words_counter import WordsCounter
+from wordscounterbot.commands import HelpCommand
+from wordscounterbot.commands import TopUsedWordsCommand
+from wordscounterbot.words_counter import WordsCounter
 
 
 class TwitchWordsCounterBot(TwitchChatBot):

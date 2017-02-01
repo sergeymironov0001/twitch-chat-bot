@@ -1,6 +1,6 @@
+""" The package contains base classes for twitch chat bot's implementation.
+
+"""
+
 from twitchchatbot.commands import Command
-from twitchchatbot.commands import HelpCommand
-from twitchchatbot.commands import TopUsedWordsCommand
 from twitchchatbot.twitch_chat_bot import TwitchChatBot
-from twitchchatbot.twitch_words_counter_bot import TwitchWordsCounterBot
-from twitchchatbot.words_counter import WordsCounter

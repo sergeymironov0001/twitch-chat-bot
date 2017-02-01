@@ -3,7 +3,7 @@ import getopt
 import logging.config
 import sys
 
-from twitchchatbot.twitch_words_counter_bot import TwitchWordsCounterBot
+from wordscounterbot.twitch_words_counter_bot import TwitchWordsCounterBot
 
 default_server = "irc.chat.twitch.tv"
 default_port = 6667
