@@ -1,6 +1,6 @@
 import unittest
 
-from twitchchatbot import WordsCounter
+from wordscounterbot import WordsCounter
 
 
 class WordsCounterTests(unittest.TestCase):
